@@ -1,0 +1,16 @@
+<schemalist gettext-domain="master-of-time">
+  <schema path="/org/gnome/shell/extensions/master-of-time/" id="org.gnome.shell.extensions.master-of-time">
+    <key type="i" name="refresh-rate">
+      <default>5</default>
+      <summary>How often to refresh? (in seconds)</summary>
+    </key>
+    <key type="s" name="display-mode">
+      <default>"Time"</default>
+      <summary>Display mode</summary>
+    </key>
+    <key type="s" name="api-service">
+      <default>"ip-api.com"</default>
+      <summary>API service</summary>
+    </key>
+  </schema>
+</schemalist>

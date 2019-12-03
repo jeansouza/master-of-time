@@ -1,0 +1,27 @@
+.master-of-time-panel {
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(102, 102, 102);
+  margin: 3px 10px 3px 10px;
+  color: white;
+  border-radius: 2px;
+  padding: 0 10px 0 0;
+}
+
+.custom-icon-style {
+  width: 20px;
+  padding: 2.5px 6px 2.5px 0;
+}
+
+.left-icon {
+  padding-left: 10px;
+}
+
+.custom-icon-style-only-flag {
+  width: 20px;
+  padding: 6px 0px 5px 0px;
+}
+
+.system-status-icon {
+  padding-top: 2px;
+}

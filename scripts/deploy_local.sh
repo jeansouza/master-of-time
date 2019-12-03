@@ -1,0 +1,1 @@
+rm -rf $HOME/.local/share/gnome-shell/extensions/master-of-time@jeansouza.github.com && cp -r ../master-of-time/extension $HOME/.local/share/gnome-shell/extensions/master-of-time@jeansouza.github.com

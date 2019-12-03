@@ -1,0 +1,15 @@
+{
+  "name": "Master of Time",
+  "extension-id": "master-of-time",
+  "settings-schema": "org.gnome.shell.extensions.master-of-time",
+  "description": "The one that will stalk your connection and know all its dirty little secrets.",
+  "uuid": "master-of-time@jeansouza.github.com",
+  "shell-version": [
+    "3.26",
+    "3.28",
+    "3.30",
+    "3.32"
+  ],
+  "url": "https://github.com/jeansouza/master-of-time",
+  "version": 4
+}

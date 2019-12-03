@@ -1,0 +1,1 @@
+rm -rf master_of_time_extension.zip && cd ./extension && glib-compile-schemas ./schemas && zip -r ../master_of_time_extension.zip *

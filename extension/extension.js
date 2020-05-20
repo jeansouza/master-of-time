@@ -10,6 +10,7 @@ const GIO = imports.gi.Gio
 const EXTENSION_UTILS = imports.misc.extensionUtils
 const UTIL = imports.misc.util
 const G_LIB = imports.gi.GLib
+const G_OBJECT = imports.gi.GObject
 
 // Constants
 const ME = EXTENSION_UTILS.getCurrentExtension()
@@ -65,9 +66,11 @@ const _makeRequest = () => {
   _displayModeProcessors['Time']()
 }
 
-class MasterOfTime extends PANEL_MENU.Button {
-  constructor() {
-    super(0.0, 'Master of Time', false)
+class MasterOfTimeClass extends PANEL_MENU.Button {
+  _init(menuAlignment, nameText, dontCreateMenu) {
+    const file = `file://${G_LIB.build_filenamev([G_LIB.get_home_dir(), 'clocks.json'])}` // check this
+
+    super._init(0.0, 'Master of Time', false)
     _hbox = new ST.BoxLayout({ style_class: 'master-of-time-panel' })
 
     const icon = new ST.Icon({
@@ -136,6 +139,8 @@ class MasterOfTime extends PANEL_MENU.Button {
     this.updateRefreshRate()
   }
 }
+
+const MasterOfTime = G_OBJECT.registerClass(MasterOfTimeClass)
 
 let _indicator
 

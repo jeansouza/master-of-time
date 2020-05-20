@@ -1,4 +1,4 @@
-const { Gtk, Gio, GLib } = imports.gi;
+const { Gtk, Gio, GLib, GObject } = imports.gi;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
@@ -11,10 +11,9 @@ const DISPLAY_MODES = ['only-flag', 'only-ip', 'IP and flag', 'ip-flag-and-count
 
 const init = () => {/* Empty */};
 
-class MasterOfTimePrefs extends Gtk.Grid {
-	
-	constructor() {
-		super();
+class MasterOfTimePrefsClass extends Gtk.Grid {
+	_init() {
+		super._init()
 		this.margin = 15;
 		this.row_spacing = 3;
 		this._settings = Convenience.getSettings();
@@ -67,8 +66,10 @@ class MasterOfTimePrefs extends Gtk.Grid {
 	}
 }
 
+const MasterOfTimePrefs = GObject.registerClass(MasterOfTimePrefsClass)
+
 const buildPrefsWidget = () => {
-	let widget = new MasterOfTimePrefs();
+	let widget = new MasterOfTimePrefs
 	widget.show_all();
 	return widget;
 }

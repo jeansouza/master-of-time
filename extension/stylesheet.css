@@ -9,6 +9,7 @@
 }
 
 .custom-icon-style {
+  height: 15px;
   width: 20px;
   padding: 2.5px 6px 2.5px 0;
 }
@@ -18,6 +19,7 @@
 }
 
 .custom-icon-style-only-flag {
+  height: 15px;
   width: 20px;
   padding: 6px 0px 5px 0px;
 }
